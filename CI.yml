@@ -1,9 +1,0 @@
-name: CI
-on:
-  push
-jobs:
-  helloworld-linux:
-    runs-on: ubuntu-latest
-    steps:
-      - name: HelloWorld
-        run: echo "Hello, World!"
