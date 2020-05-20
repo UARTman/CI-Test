@@ -11,6 +11,8 @@ jobs:
         with:
           python-version: '3.x'
           architecture: 'x64'
+      - name: Run Tests
+        run: python test-main.py
 
   test-windows-x64:
     runs-on: windows-latest
@@ -22,6 +24,8 @@ jobs:
         with:
           python-version: '3.x'
           architecture: 'x64'
+      - name: Run Tests
+        run: python test-main.py
 
   test-windows-x86:
     runs-on: windows-latest
@@ -33,3 +37,5 @@ jobs:
         with:
           python-version: '3.x'
           architecture: 'x86'
+      - name: Run Tests
+        run: python test-main.py
