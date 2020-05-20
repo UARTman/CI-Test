@@ -58,6 +58,11 @@ jobs:
         run: pip install pyinstaller
       - name: Create exe
         run: pyinstaller main.py --onefile
+      - name: Upload exe
+        uses: actions/upload-artifact@v2
+        with:
+          name: main-x64
+          path: dist/main.exe
 
   build-windows-x86:
     needs:
@@ -75,3 +80,8 @@ jobs:
         run: pip install pyinstaller
       - name: Create exe
         run: pyinstaller main.py --onefile
+      - name: Upload exe
+        uses: actions/upload-artifact@v2
+        with:
+          name: main-x86
+          path: dist/main.exe
