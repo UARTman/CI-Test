@@ -6,9 +6,13 @@ jobs:
     steps:
       - name: HelloWorld
         run: echo "Hello, World!"
+      - name: LS
+        run: ls
 
   helloworld-windows:
     runs-on: windows-latest
     steps:
       - name: HelloWorld
         run: echo "Hello, World"
+      - name: LS
+        run: dir
