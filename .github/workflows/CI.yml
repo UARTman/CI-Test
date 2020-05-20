@@ -1,22 +1,24 @@
 name: CI
 on: push
 jobs:
-  helloworld-linux:
+  test-linux:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: HelloWorld
-        run: echo "Hello, World!"
-      - name: LS
-        run: ls
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          architecture: 'x64'
 
-  helloworld-windows:
+  test-windows:
     runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: HelloWorld
-        run: echo "Hello, World"
-      - name: LS
-        run: dir
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          architecture: 'x64'
